@@ -13,10 +13,8 @@
         <title>JSP Page</title>
     </head>
     <body>
-        <%
-            BankCustomer customer=(BankCustomer)request.getAttribute("customer");
-        %>
-        <h1>Hello, <%=customer.getFirstName()%></h1>
+        <jsp:useBean id="customer" type="lendle.courses.network.simplemvc.BankCustomer" scope="request"/>
+        <h1>Hello 55555,<jsp:getProperty name="customer" property="firstName"/> </h1>
         您太厲害了！
     </body>
 </html>
